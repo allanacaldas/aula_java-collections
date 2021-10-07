@@ -25,6 +25,9 @@ public class TestaCurso2 {
         Collections.sort(listaMutavel);
         System.out.println("Aulas ordenadas: " + listaMutavel);
 
-        System.out.println("Tempo total das aulas ordenadas "+javaColecoes.getTempoTotal() + " minutos");
+        System.out.println("Tempo total das aulas ordenadas " + javaColecoes.getTempoTotal() + " minutos");
+
+        //Imprimindo os cursos
+        System.out.println("Nosso cursos -> " + javaColecoes);
     }
 }
