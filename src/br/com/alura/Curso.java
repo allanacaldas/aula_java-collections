@@ -27,7 +27,20 @@ public class Curso {
         //Através do unmodifiableList, devolvemos uma cópia da lista de aulas sem permitir que ela possa ser alterada ou que seja adicionada mais uma aula à ela.
         return Collections.unmodifiableList(aulas);
     }
-    public void adiciona(Aula aula){
+
+    public void adiciona(Aula aula) {
         this.aulas.add(aula);
+    }
+
+    //Calculando o tempo total de aulas do Curso
+    public int getTempoTotal() {
+
+//        int tempoTotal = 0;
+//        for (Aula aula : aulas) {
+//            tempoTotal+=aula.getTempo();
+//        }
+//        return tempoTotal;
+
+        return this.aulas.stream().mapToInt(aula -> aula.getTempo()).sum();
     }
 }
