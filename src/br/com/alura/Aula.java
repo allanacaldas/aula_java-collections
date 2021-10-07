@@ -1,6 +1,7 @@
 package br.com.alura;
 //Classe criada na aula 02 - Lista de Objetos
-public class Aula {
+
+public class Aula implements Comparable<Aula> {
     private String titulo;
     private int tempo;
 
@@ -21,5 +22,10 @@ public class Aula {
     @Override
     public String toString() {
         return "[Aula: " + this.titulo + ", " + this.tempo + " minutos]";
+    }
+
+    @Override
+    public int compareTo(Aula aula) {
+        return this.titulo.compareTo(aula.titulo);
     }
 }
