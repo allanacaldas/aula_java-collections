@@ -1,5 +1,6 @@
 package br.com.alura;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -39,9 +40,13 @@ public class TestandoListas {
             System.out.println("Aula " + aula);
         });
 
-
         //Acessando elementos
         String primeiraAula = aulas.get(0);
         System.out.println("A primeira aula é " + primeiraAula);
+
+        //Ordenando elementos - Faremos isso usando o método estático sort() da classe java.util.Collections
+        Collections.sort(aulas);
+        System.out.println("Depois de ordenado:");
+        System.out.println(aulas);
     }
 }
