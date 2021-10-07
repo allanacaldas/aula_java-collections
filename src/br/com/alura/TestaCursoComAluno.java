@@ -27,9 +27,28 @@ public class TestaCursoComAluno {
         });
 
         // O código abaixo dispara a exceção "UnsupportedOperationException" porque um conjunto destinado a ser vazio não pode ter um elemento, certo?
+        /*
         Set<String> nomes = Collections.emptySet();
         nomes.add("Paulo");
         System.out.println(nomes);
+        */
 
+        //Equals e hashCode
+        System.out.println("O aluno " + a1.getNome() + " está matriculado?");
+        System.out.println(javaColecoes.estaMatriculado(a1));
+
+
+        //Personalizando o método equals
+        Aluno turini = new Aluno("Rodrigo Turini", 34672);
+
+        System.out.println("O a1 é equals ao Turini?");
+        System.out.println(a1.equals(turini));
+
+        System.out.println("E esse Turini, está matriculado?");
+        System.out.println(javaColecoes.estaMatriculado(turini));
+
+        /* Ainda que o nome e a matrícula do aluno sejam idênticas, ao instanciar outro objeto (new Aluno())
+        o equals() e o hashCode entendem que são objetos diferentes, fazem referência a objetos diferentes.
+        Por isso, é necessário que ambos sejas reescritos na classe de Aluno*/
     }
 }
