@@ -26,6 +26,11 @@ public class TestandoListas {
         for (String aula : aulas) {
             System.out.println("Aula: " + aula);
         }
+        //Outra forma de percorrer a lista
+        //Nesse modo, precisamos saber quantos elementos há nessa lista e faremos isso usando o size()
+        for (int i = 0; i < aulas.size(); i++) {
+            System.out.println("aula : " + aulas.get(i));
+        }
 
         //Acessando elementos
         String primeiraAula = aulas.get(0);
