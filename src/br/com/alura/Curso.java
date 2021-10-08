@@ -8,7 +8,9 @@ public class Curso {
     private String instrutor;
     private List<Aula> aulas = new LinkedList<Aula>();
     private Set<Aluno> alunos = new HashSet<>();
-    //private Set<Aluno> alunos = new LinkedHashSet<>(); //LinkedHashSet é a implementação de Set que guarda a ordem em que os elementos foram adicionados
+
+    // Queremos que para cada matrícula, haja um aluno associado. Por isso, a interface Map é indicada nesses casos.
+    private Map<Integer, Aluno> matriculaParaAluno = new HashMap<>();
 
     public Curso(String nome, String instrutor) {
         this.nome = nome;
@@ -43,12 +45,15 @@ public class Curso {
 
         return this.aulas.stream().mapToInt(aula -> aula.getTempo()).sum();
     }
+
     public Set<Aluno> getAlunos() {
         return Collections.unmodifiableSet(alunos);
     }
-
-    public void matricula(Aluno a3) {
-        this.alunos.add(a3);
+    /*Modificaremos o método matricula para que, toda vez que um aluno seja adicionado na lista de alunos do curso,
+     ele também seja associado a um número de matrícula*/
+    public void matricula(Aluno aluno) {
+        this.alunos.add(aluno);
+        this.matriculaParaAluno.put(aluno.getNumeroMatricula(), aluno);
     }
 
     @Override
@@ -65,4 +70,7 @@ public class Curso {
         return this.alunos.contains(aluno);
     }
 
+    public Aluno buscaMatriculado(int numero) {
+        return this.matriculaParaAluno.get(numero);
+    }
 }
