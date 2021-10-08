@@ -1,6 +1,6 @@
 # Anotações - Java Collections: Dominando Listas, Sets e Mapas
 
-Nesse resumo, foram destacados pontos imporntantes dos estudos do curso **Java Collections: Dominando Listas, Sets e Mapas** (Formação Java e OO) da Alura ministrado pelo Professor **Paulo Silveira** e cada commit tem a finalidade registrar o que foi aprendido em cada aula do treinamento.
+Nesse resumo, foram destacados pontos importantes dos estudos do curso **Java Collections: Dominando Listas, Sets e Mapas** (Formação Java e OO) da Alura ministrado pelo Professor **Paulo Silveira** e cada commit tem a finalidade registrar o que foi aprendido em cada aula do treinamento.
 
 # Aula 02 - Lista de Objetos
 
