@@ -1,6 +1,7 @@
 package br.com.alura;
 
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.Set;
 
 public class TestaCursoComAluno {
@@ -50,5 +51,21 @@ public class TestaCursoComAluno {
         /* Ainda que o nome e a matrícula do aluno sejam idênticas, ao instanciar outro objeto (new Aluno())
         o equals() e o hashCode entendem que são objetos diferentes, fazem referência a objetos diferentes.
         Por isso, é necessário que ambos sejas reescritos na classe de Aluno*/
+
+
+        //Aprendendo a usar o Iterator (modo como acessavam os elementos de um Set antes do Java 5)
+        Set<Aluno> alunos = javaColecoes.getAlunos(); //toda coleção possui Iterator, podemos pegá-lo usando o método de mesmo nome
+        Iterator<Aluno> iterador = alunos.iterator();
+
+        /*
+        * Com o iterador em mãos, existem dois métodos que costumamos usar. O primeiro é o método hasNext, que devolve um booleano dizendo
+        * se há ou não um próximo elemento na coleção. Então a primeira pergunta que sempre fazemos para o iterador é: "tem um próximo elemento na coleção?".
+        * Até porque se não houver um próximo elemento, não iremos querer pegá-lo. O segundo método é o next, que justamente devolve o próximo elemento.
+        *
+        * */
+
+        while(iterador.hasNext()){
+            System.out.println(iterador.next());
+        }
     }
 }

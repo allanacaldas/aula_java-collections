@@ -8,6 +8,7 @@ public class Curso {
     private String instrutor;
     private List<Aula> aulas = new LinkedList<Aula>();
     private Set<Aluno> alunos = new HashSet<>();
+    //private Set<Aluno> alunos = new LinkedHashSet<>(); //LinkedHashSet é a implementação de Set que guarda a ordem em que os elementos foram adicionados
 
     public Curso(String nome, String instrutor) {
         this.nome = nome;
